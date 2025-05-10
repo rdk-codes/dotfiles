@@ -1,0 +1,159 @@
+@import "rosepine.css";
+
+* {
+    border: none;
+    margin: 0;
+    padding: 0;
+    font-family: "JetBrainsMono Nerd Font", monospace;
+    font-size: 14px;
+    min-height: 0px;
+    color: @text;
+    background: transparent;
+}
+
+window#waybar {
+    background: rgba(8, 8, 15, 0.82); /* Slightly reduced transparency */
+    border-radius: 12px;
+    padding: 0px 10px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+}
+
+/* === Workspaces === */
+#workspaces {
+    padding: 0 2px; 
+    margin: 4px 2px; 
+}
+
+#workspaces button {
+    color: @muted;
+    background: transparent;
+    padding: 4px 10px;
+    margin: 2px 4px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+#workspaces button.active {
+    color: @pine;
+    font-weight: bold;
+    background: rgba(49, 116, 143, 0.1);
+    text-shadow: 0 0 6px @pine;
+}
+
+#workspaces button:hover {
+    color: @gold;
+    background: rgba(246, 193, 119, 0.1);
+}
+
+#workspaces button.urgent {
+    color: @love;
+    font-weight: bold;
+    animation: urgent-blink 1s infinite;
+}
+
+/* === Module Defaults === */
+#clock,
+#network,
+#battery,
+#pulseaudio,
+#custom-brightness,
+#backlight,
+#tray,
+#window,
+#submap {
+    padding: 0px 8px 0px 8px;
+    margin: 6px 4px;
+    border-radius: 6px;
+    transition:
+        background 0.3s ease,
+        color 0.3s ease;
+}
+
+/* === Module-specific coloring === */
+#clock {
+    color: @foam;
+}
+#network {
+    color: @foam;
+}
+#pulseaudio {
+    color: @iris;
+}
+#pulseaudio.muted {
+    color: @muted;
+    font-style: italic;
+}
+#custom-brightness,
+#backlight {
+    color: @gold;
+}
+#battery {
+    color: @rose;
+}
+#battery.charging {
+    color: @pine;
+}
+#battery.plugged {
+    color: @foam;
+}
+#battery.full {
+    color: @iris;
+}
+#battery.warning {
+    color: @gold;
+}
+#battery.critical {
+    color: @love;
+    animation: critical-blink 1s infinite;
+}
+#custom-cpu {
+    color: @iris;
+}
+#custom-memory {
+    color: @pine;
+}
+#custom-temp {
+    color: @love;
+}
+
+/* === Hover Interactions === */
+#clock:hover,
+#network:hover,
+#battery:hover,
+#pulseaudio:hover,
+#custom-brightness:hover,
+#backlight:hover {
+    font-weight: 800;
+    background: rgba(196, 167, 231, 0.08); /* iris */
+    color: @rose;
+    text-shadow: 0 0 4px @rose;
+}
+
+/* === Tooltip Styling === */
+tooltip {
+    background: @highlightLow;
+    color: @text;
+    border: 1px solid @muted;
+    border-radius: 8px;
+    padding: 8px 12px;
+}
+
+/* === Animations === */
+@keyframes critical-blink {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.4;
+    }
+}
+
+@keyframes urgent-blink {
+    0% {
+        text-shadow: 0 0 2px @love;
+    }
+    100% {
+        text-shadow: 0 0 8px @love;
+    }
+}
+

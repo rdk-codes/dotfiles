@@ -1,0 +1,94 @@
+  {
+  // "layer": "top",
+  "position": "top",
+  "margin-top": 6,
+  "margin-left": 6,
+  "margin-right": 6,
+  "modules-left": ["hyprland/workspaces"],
+  "modules-center": ["hyprland/submap", "hyprland/window"],
+  "modules-right": [
+    "custom/brightness",
+    "pulseaudio",
+    "battery",
+    "network",
+    "clock",
+  ],
+
+  "hyprland/workspaces": {
+    "disable-scroll": true,
+    "all-outputs": true,
+    "warp-on-scroll": false,
+    "format": "{name}",
+  },
+
+  "hyprland/submap": {
+    "always-on": true,
+    "default-submap": "",
+    "format": "[{}]",
+    "format-resize": "{}",
+    "tooltip": false,
+  },
+
+  "hyprland/window": {
+    "format": "{title}",
+    "max-length": 48,
+    "tooltip": false,
+    "icon": true,
+    "icon-size": 18,
+  },
+
+  "network": {
+    "format-wifi": " ",
+    "format-ethernet": "{ipaddr}/{cidr} ",
+    "tooltip-format": "{ifname} via {gwaddr} ",
+    "format-linked": "{ifname} (No IP) ",
+    "format-disconnected": "Disconnected ⚠",
+    "on-click": "nm-applet",
+  },
+
+  "pulseaudio": {
+    "format": "{icon}  {volume}%",
+    "format-muted": "",
+    "format-source": " {volume}%",
+    "format-source-muted": "",
+    "format-icons": {
+      "default": ["", "", ""],
+    },
+    "scroll-step": 5,
+    "on-click": "pamixer -t",
+    "on-scroll-up": "pamixer -i 5",
+    "on-scroll-down": "pamixer -d 5",
+  },
+
+  "custom/brightness": {
+    "name": "custom/brightness",
+    "exec": "brightnessctl | awk -F '[()]' '/Current/ {print $2}'",
+    "interval": 1,
+    "format": "󰃞 {}",
+    "tooltip": false,
+    "on-scroll-up": "brightnessctl set +5%",
+    "on-scroll-down": "brightnessctl set 5%-",
+  },
+
+  "clock": {
+    "format": " {:%I:%M:%S} ",
+    "format-alt": "󰃭 {:%A, %d %B %Y}",
+    "interval": 1,
+    "on-click": "mode",
+  },
+
+  "battery": {
+    "interval": 10,
+    "states": {
+      "warning": 20,
+      "critical": 10
+    },
+    "format": "{icon} {capacity}%",
+    "format-charging": " {capacity}%",
+    "format-plugged": " {capacity}%",
+    "format-charging-full": " {capacity}%",
+    "format-full": " {capacity}%",
+    "format-icons": ["", "", "", "", ""],
+    "tooltip-format": " {power}W",
+  },
+}
