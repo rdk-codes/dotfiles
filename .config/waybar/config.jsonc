@@ -1,5 +1,5 @@
-  {
-  // "layer": "top",
+{
+  "layer": "top",
   "position": "top",
   "margin-top": 6,
   "margin-left": 6,
@@ -36,15 +36,14 @@
     "icon": true,
     "icon-size": 18,
   },
-
-  "network": {
-    "format-wifi": " ",
-    "format-ethernet": "{ipaddr}/{cidr} ",
-    "tooltip-format": "{ifname} via {gwaddr} ",
-    "format-linked": "{ifname} (No IP) ",
-    "format-disconnected": "Disconnected ⚠",
-    "on-click": "nm-applet",
-  },
+ "network": {
+   "format-wifi": " ",
+   "format-ethernet": "{ipaddr}/{cidr} ",
+   "tooltip-format": "{ifname} via {gwaddr} ",
+   "format-linked": "{ifname} (No IP) ",
+   "format-disconnected": "Disconnected ⚠",
+   "on-click": "nm-applet",
+ },
 
   "pulseaudio": {
     "format": "{icon}  {volume}%",

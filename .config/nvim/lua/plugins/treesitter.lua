@@ -7,10 +7,10 @@ return {
       auto_install = false,
       ensure_installed = {
         "lua",
-        "python"
+        "python",
       },
       highlight = { enable = true },
       indent = { enable = false },
     })
-  end
+  end,
 }
