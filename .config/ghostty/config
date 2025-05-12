@@ -12,4 +12,4 @@ background-opacity = 0.85
 shell-integration = detect
 confirm-close-surface = false
 window-padding-x = 16
-window-padding-y = 14, 6
+window-padding-y = 16, 4
