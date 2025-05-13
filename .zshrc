@@ -93,10 +93,16 @@ alias rls='/bin/ls'
 alias l='eza --color=always --icons=always -1'
 alias ls='eza --color=always --icons=always'
 alias zed='zeditor'
-alias chrome='env OZONE_PLATFORM=wayland google-chrome-stable --ozone-platform=wayland'
-alias code='env OZONE_PLATFORM=wayland code --ozone-platform-hint=wayland 2>/dev/null'
 alias copy='wl-copy'
 alias paste='wl-paste'
+alias nvcc='rm -rf ~/.local/share/nvim
+rm -rf ~/.local/state/nvim
+rm -rf ~/.cache/nvim'
+alias chrome='env OZONE_PLATFORM=wayland google-chrome-stable --ozone-platform=wayland'
+alias code='env OZONE_PLATFORM=wayland code --ozone-platform=wayland'
+# alias pycharm='env OZONE_PLATFORM=wayland pycharm --ozone-platform=wayland'
+alias obsidian='env OZONE_PLATFORM=wayland obsidian --ozone-platform=wayland'
+alias cw="source ~/.config/hypr/scripts/swww/change.sh"
 
 # Load zoxide
 eval "$(zoxide init --cmd cd zsh)"
