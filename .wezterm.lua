@@ -5,7 +5,7 @@ local config = wezterm.config_builder()
 config.font = wezterm.font("JetBrainsMono Nerd Font")
 config.enable_tab_bar = false
 config.font_size = 16
-config.window_background_opacity = 0.9
+config.window_background_opacity = 0.85
 config.default_cursor_style = "BlinkingBar"
 config.cursor_blink_rate = 600
 

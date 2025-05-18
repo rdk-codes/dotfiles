@@ -36,18 +36,18 @@
     "icon": true,
     "icon-size": 18,
   },
- "network": {
-   "format-wifi": " ",
-   "format-ethernet": "{ipaddr}/{cidr} ",
-   "tooltip-format": "{ifname} via {gwaddr} ",
-   "format-linked": "{ifname} (No IP) ",
-   "format-disconnected": "Disconnected ⚠",
-   "on-click": "nm-applet",
- },
+  "network": {
+    "format-wifi": " ",
+    "format-ethernet": "{ipaddr}/{cidr} ",
+    "tooltip-format": "{ifname} via {gwaddr} ",
+    "format-linked": "{ifname} (No IP) ",
+    "format-disconnected": "Disconnected ⚠",
+    "on-click": "nm-applet",
+  },
 
   "pulseaudio": {
     "format": "{icon}  {volume}%",
-    "format-muted": "",
+    "format-muted": " ",
     "format-source": " {volume}%",
     "format-source-muted": "",
     "format-icons": {
@@ -80,7 +80,7 @@
     "interval": 10,
     "states": {
       "warning": 20,
-      "critical": 10
+      "critical": 10,
     },
     "format": "{icon} {capacity}%",
     "format-charging": " {capacity}%",
