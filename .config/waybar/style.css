@@ -1,5 +1,3 @@
-@import "rosepine.css";
-
 * {
     border: none;
     margin: 0;
@@ -7,47 +5,48 @@
     font-family: "JetBrainsMono Nerd Font", monospace;
     font-size: 14px;
     min-height: 0px;
-    color: @text;
+    color: #e0def4; /* @text */
     background: transparent;
 }
 
 window#waybar {
-    background: rgba(8, 8, 15, 0.82); /* Slightly reduced transparency */
-    border-radius: 12px;
+    background: rgba(8, 8, 15, 0.9);
     padding: 0px 10px;
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
 }
 
 /* === Workspaces === */
 #workspaces {
-    padding: 0 2px; 
-    margin: 4px 2px; 
+    padding: 0 2px;
+    margin: 4px 2px;
 }
 
 #workspaces button {
-    color: @muted;
+    color: #ebbcba; /* @rose */
     background: transparent;
-    padding: 4px 10px;
-    margin: 2px 4px;
-    border-radius: 6px;
+    padding: 4px 8px;
+    margin: 1px 2px;
+    border-radius: 3px;
+    border-top: 2px solid transparent;
     transition: all 0.3s ease;
 }
 
 #workspaces button.active {
-    color: @pine;
+    color: #c4a7e7; /* @mauve */
     font-weight: bold;
     background: rgba(49, 116, 143, 0.1);
-    text-shadow: 0 0 6px @pine;
+    text-shadow: 0 0 6px #31748f; /* @pine */
+    border-top: 2px solid rgba(196, 167, 231, 0.5); /* @mauve subtle */
 }
 
 #workspaces button:hover {
-    color: @gold;
+    color: #f6c177; /* @gold */
     background: rgba(246, 193, 119, 0.1);
 }
 
 #workspaces button.urgent {
-    color: @love;
-    font-weight: bold;
+    background-color: #eb4d4b;
+    border-top: 2px solid #eb4d4b;
     animation: urgent-blink 1s infinite;
 }
 
@@ -71,49 +70,49 @@ window#waybar {
 
 /* === Module-specific coloring === */
 #clock {
-    color: @foam;
+    color: #9ccfd8; /* @foam */
 }
 #network {
-    color: @foam;
+    color: #9ccfd8; /* @foam */
 }
 #pulseaudio {
-    color: @iris;
+    color: #c4a7e7; /* @iris */
 }
 #pulseaudio.muted {
-    color: @muted;
+    color: #6e6a86; /* @muted */
     font-style: italic;
 }
 #custom-brightness,
 #backlight {
-    color: @gold;
+    color: #f6c177; /* @gold */
 }
 #battery {
-    color: @rose;
+    color: #ebbcba; /* @rose */
 }
 #battery.charging {
-    color: @pine;
+    color: #31748f; /* @pine */
 }
 #battery.plugged {
-    color: @foam;
+    color: #9ccfd8; /* @foam */
 }
 #battery.full {
-    color: @iris;
+    color: #c4a7e7; /* @iris */
 }
 #battery.warning {
-    color: @gold;
+    color: #f6c177; /* @gold */
 }
 #battery.critical {
-    color: @love;
+    color: #eb6f92; /* @love */
     animation: critical-blink 1s infinite;
 }
 #custom-cpu {
-    color: @iris;
+    color: #c4a7e7; /* @iris */
 }
 #custom-memory {
-    color: @pine;
+    color: #31748f; /* @pine */
 }
 #custom-temp {
-    color: @love;
+    color: #eb6f92; /* @love */
 }
 
 /* === Hover Interactions === */
@@ -125,15 +124,15 @@ window#waybar {
 #backlight:hover {
     font-weight: 800;
     background: rgba(196, 167, 231, 0.08); /* iris */
-    color: @rose;
-    text-shadow: 0 0 4px @rose;
+    color: #ebbcba; /* @rose */
+    text-shadow: 0 0 4px #ebbcba;
 }
 
 /* === Tooltip Styling === */
 tooltip {
-    background: @highlightLow;
-    color: @text;
-    border: 1px solid @muted;
+    background: #2a273f; /* @highlightLow */
+    color: #e0def4; /* @text */
+    border: 1px solid #6e6a86; /* @muted */
     border-radius: 8px;
     padding: 8px 12px;
 }
@@ -150,10 +149,10 @@ tooltip {
 
 @keyframes urgent-blink {
     0% {
-        text-shadow: 0 0 2px @love;
+        text-shadow: 0 0 2px #eb6f92;
     }
     100% {
-        text-shadow: 0 0 8px @love;
+        text-shadow: 0 0 8px #eb6f92;
     }
 }
 
