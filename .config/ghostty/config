@@ -6,7 +6,7 @@ font-feature = -liga
 # Appearance
 theme = "rose-pine"
 # background = "#08080f"
-background-opacity = 0.965
+background-opacity = 0.96
 
 # Other Settings
 shell-integration = detect
