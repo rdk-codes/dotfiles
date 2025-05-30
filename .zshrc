@@ -98,21 +98,11 @@ alias paste='wl-paste'
 alias nvcc='rm -rf ~/.local/share/nvim
 rm -rf ~/.local/state/nvim
 rm -rf ~/.cache/nvim'
+alias tmcc= "rm -rf ~/.config/tmux/plugins"
 alias chrome='env OZONE_PLATFORM=wayland google-chrome-stable --ozone-platform=wayland'
 alias code='env OZONE_PLATFORM=wayland code --ozone-platform=wayland'
-# alias pycharm='env OZONE_PLATFORM=wayland pycharm --ozone-platform=wayland'
 alias obsidian='env OZONE_PLATFORM=wayland obsidian --ozone-platform=wayland'
 alias cw="source ~/.config/hypr/scripts/swww/change.sh"
-alias dotcommit="
-cd ~/dotfiles
-git add .
-git commit -m "changes to dotfiles"
-"
-alias dotpush="git push -u origin main"
-alias dotstow="
-cd ~/dotfiles
-stow .
-"
 
 # Load zoxide
 eval "$(zoxide init --cmd cd zsh)"
