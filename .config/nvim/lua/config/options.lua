@@ -32,4 +32,4 @@ opt.splitbelow = true
 opt.swapfile = false
 
 -- fix annoying
-vim.opt.fillchars:append { eob = " " }
+vim.opt.fillchars:append({ eob = " " })

@@ -95,9 +95,11 @@ alias ls='eza --color=always --icons=always'
 alias zed='zeditor'
 alias copy='wl-copy'
 alias paste='wl-paste'
-alias nvcc='rm -rf ~/.local/share/nvim
-rm -rf ~/.local/state/nvim
-rm -rf ~/.cache/nvim'
+alias nvcc='
+  rm -rf ~/.local/share/nvim
+  rm -rf ~/.local/state/nvim
+  rm -rf ~/.cache/nvim
+'
 alias tmcc= "rm -rf ~/.config/tmux/plugins"
 alias chrome='env OZONE_PLATFORM=wayland google-chrome-stable --ozone-platform=wayland'
 alias code='env OZONE_PLATFORM=wayland code --ozone-platform=wayland'
