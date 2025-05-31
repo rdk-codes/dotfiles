@@ -1,19 +1,16 @@
 return {
 	{
-		"mason-org/mason.nvim",
+		"williamboman/mason.nvim",
 		config = function()
 			require("mason").setup()
 		end,
 	},
 	{
-		"mason-org/mason-lspconfig.nvim",
-		dependencies = {
-			"mason-org/mason.nvim",
-			"neovim/nvim-lspconfig",
-		},
+		"williamboman/mason-lspconfig.nvim",
+		dependencies = { "neovim/nvim-lspconfig", "williamboman/mason.nvim" },
 		config = function()
 			require("mason-lspconfig").setup({
-				ensure_installed = { "lua_ls", "pyright" },
+				ensure_installed = { "lua_ls", "pyright" }, -- Add more as needed
 			})
 		end,
 	},
@@ -21,12 +18,7 @@ return {
 		"WhoIsSethDaniel/mason-tool-installer.nvim",
 		config = function()
 			require("mason-tool-installer").setup({
-				ensure_installed = {
-					"stylua",
-					"luacheck",
-					"black",
-					"pylint",
-				},
+				ensure_installed = { "stylua", "luacheck", "black", "pylint" },
 				auto_update = false,
 				run_on_start = true,
 			})

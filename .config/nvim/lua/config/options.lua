@@ -18,9 +18,11 @@ opt.wrap = false
 -- search settings
 opt.ignorecase = true
 opt.smartcase = true
+opt.hlsearch = false
+opt.incsearch = true
 
 opt.cursorline = false
-opt.termguicolors = true
+vim.opt.termguicolors = true
 opt.signcolumn = "yes"
 
 -- backspace
