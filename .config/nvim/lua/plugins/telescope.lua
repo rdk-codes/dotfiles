@@ -46,10 +46,10 @@ return {
         telescope.load_extension("fzf")
         telescope.load_extension("ui-select")
 
-        vim.keymap.set("n", "<leader><leader>", builtin.find_files, { desc = "Find Files" })
+        vim.keymap.set("n", "<leader><leader>", builtin.buffers, { desc = "Buffers" })
+        vim.keymap.set("n", "<leader>ff", builtin.find_files, { desc = "Find Files" })
         vim.keymap.set("n", "<leader>fg", builtin.live_grep, { desc = "Live Grep" })
         vim.keymap.set("n", "<leader>fr", builtin.oldfiles, { desc = "Recent Files" })
-        vim.keymap.set("n", "<leader>fb", builtin.buffers, { desc = "Buffers" })
         vim.keymap.set("n", "<leader>fc", builtin.colorscheme, { desc = "Themes" })
         vim.keymap.set("n", "<leader>fv", builtin.vim_options, { desc = "Options" })
     end,

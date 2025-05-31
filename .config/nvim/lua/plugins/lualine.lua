@@ -1,18 +1,58 @@
 return {
   'nvim-lualine/lualine.nvim',
-  dependencies = {
-    'nvim-tree/nvim-web-devicons',
-  },
+  dependencies = { 'nvim-tree/nvim-web-devicons' },
   config = function()
+    local colors = {
+      blue = "#9ccfd8",           -- Rosé Pine foam
+      green = "#31748f",          -- Rosé Pine pine
+      violet = "#c4a7e7",         -- Rosé Pine iris
+      yellow = "#f6c177",         -- Rosé Pine gold
+      red = "#eb6f92",            -- Rosé Pine love
+      fg = "#e0def4",             -- Rosé Pine text
+      bg = "#191724",             -- Rosé Pine base
+      inactive_bg = "#26233a",    -- Rosé Pine muted background
+      semilightgray = "#6e6a86",  -- Rosé Pine muted text
+    }
+
+    local my_lualine_theme = {
+      normal = {
+        a = { bg = colors.blue, fg = colors.bg, gui = "bold" },
+        b = { bg = colors.bg, fg = colors.fg },
+        c = { bg = colors.bg, fg = colors.fg },
+      },
+      insert = {
+        a = { bg = colors.green, fg = colors.bg, gui = "bold" },
+        b = { bg = colors.bg, fg = colors.fg },
+        c = { bg = colors.bg, fg = colors.fg },
+      },
+      visual = {
+        a = { bg = colors.violet, fg = colors.bg, gui = "bold" },
+        b = { bg = colors.bg, fg = colors.fg },
+        c = { bg = colors.bg, fg = colors.fg },
+      },
+      command = {
+        a = { bg = colors.yellow, fg = colors.bg, gui = "bold" },
+        b = { bg = colors.bg, fg = colors.fg },
+        c = { bg = colors.bg, fg = colors.fg },
+      },
+      replace = {
+        a = { bg = colors.red, fg = colors.bg, gui = "bold" },
+        b = { bg = colors.bg, fg = colors.fg },
+        c = { bg = colors.bg, fg = colors.fg },
+      },
+      inactive = {
+        a = { bg = colors.inactive_bg, fg = colors.semilightgray, gui = "bold" },
+        b = { bg = colors.inactive_bg, fg = colors.semilightgray },
+        c = { bg = colors.inactive_bg, fg = colors.semilightgray },
+      },
+    }
 
     require('lualine').setup {
       options = {
         icons_enabled = true,
-        theme = 'rose-pine', -- Set the lualine theme to Rosé Pine
-        -- component_separators = { left = '', right = ''},
-        -- section_separators = { left = '', right = ''},
-        component_separators = { left = '', right = ''},
-        section_separators = { left = '', right = ''},
+        theme = my_lualine_theme,
+        component_separators = { left = '', right = '' },
+        section_separators = { left = '', right = '' },
         disabled_filetypes = {
           statusline = {},
           winbar = {},
@@ -29,11 +69,10 @@ return {
       },
       sections = {
         lualine_a = {'mode'},
-        -- lualine_b = {'branch', 'diff', 'diagnostics'},
+        lualine_b = {'branch', 'diagnostics'},
         lualine_c = {'filename'},
         lualine_x = {'filetype'},
-        -- lualine_y = {'progress'},
-        -- lualine_z = {'location'}
+        lualine_y = {},
       },
       inactive_sections = {
         lualine_a = {},
