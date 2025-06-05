@@ -1,0 +1,16 @@
+# Font
+font-family = "JetBrainsMono Nerd Font"
+font-size = 16
+# font-feature = -liga
+
+# Appearance
+theme = "rose-pine"
+background = "#121017"
+# background = "#000000"
+background-opacity = 0.97
+
+# Other Settings
+shell-integration = detect
+confirm-close-surface = false
+# window-padding-x = 8
+# window-padding-y = 6
