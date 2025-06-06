@@ -30,10 +30,12 @@ return {
 
 			["<C-S-k>"] = { "show_signature", "hide_signature", "fallback" },
 		},
+
 		appearance = {
-			use_nvim_cmp_as_default = true,
+			use_nvim_cmp_as_default = false,
 			nerd_font_variant = "mono",
 		},
+
 		completion = {
 			documentation = {
 				auto_show = true,
@@ -44,9 +46,11 @@ return {
 					winhighlight = "NormalFloat:NormalFloat,FloatBorder:FloatBorder",
 				},
 			},
+
 			accept = {
 				auto_brackets = { enabled = true },
 			},
+
 			menu = {
 				border = "rounded",
 				draw = {
@@ -78,10 +82,12 @@ return {
 				},
 			},
 		},
+
 		signature = {
 			enabled = true,
 			window = { border = "rounded" },
 		},
+
 		sources = {
 			default = {
 				"lsp",
@@ -89,6 +95,7 @@ return {
 				"snippets",
 				"buffer",
 			},
+
 			providers = {
 				lsp = {
 					min_keyword_length = 0,
@@ -97,7 +104,7 @@ return {
 					min_keyword_length = 0,
 				},
 				snippets = {
-					min_keyword_length = 2,
+					min_keyword_length = 3,
 				},
 				buffer = {
 					min_keyword_length = 5,
@@ -105,9 +112,11 @@ return {
 				},
 			},
 		},
+
 		snippets = {
 			preset = "luasnip",
 		},
+
 		fuzzy = {
 			implementation = "lua",
 		},

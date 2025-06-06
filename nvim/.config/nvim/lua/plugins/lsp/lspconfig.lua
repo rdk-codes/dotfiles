@@ -16,10 +16,12 @@ return {
 		local servers = {
 			lua_ls = {
 				settings = {
-					Lua = { completion = { callSnippet = "Replace" } },
+					Lua = {
+						completion = { callSnippet = "Replace" },
+					},
 				},
 			},
-			pyright = {},
+			basedpyright = {},
 		}
 
 		for name, config in pairs(servers) do
@@ -37,7 +39,6 @@ return {
 				map("K", function()
 					vim.lsp.buf.hover({ border = "rounded", max_width = 80, max_height = 20 })
 				end, "Hover Doc")
-
 				map("<leader>gn", vim.lsp.buf.rename, "Rename")
 				map("<leader>ga", vim.lsp.buf.code_action, "Code Action", { "n", "x" })
 				map("<leader>gr", require("telescope.builtin").lsp_references, "References")

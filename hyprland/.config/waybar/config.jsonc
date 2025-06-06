@@ -37,13 +37,15 @@
     "icon": true,
     "icon-size": 18,
   },
+
   "network": {
     "format-wifi": " ",
+    "format-alt": "  {essid}",
     "format-ethernet": "{ipaddr}/{cidr} ",
     "tooltip-format": "{ifname} via {gwaddr} ",
     "format-linked": "{ifname} (No IP) ",
     "format-disconnected": "Disconnected ⚠",
-    "on-click": "nm-applet",
+    "on-click": "mode"
   },
 
   "pulseaudio": {
@@ -71,10 +73,10 @@
   },
 
   "clock": {
-    "format": " {:%I:%M:%S} ",
-    "format-alt": "󰃭 {:%A, %d %B %Y}",
+    "format": " {:%I:%M:%S}",
+    "tooltip-format": "󰃭 {:%A, %d %B %Y}",
     "interval": 1,
-    "on-click": "mode",
+    "on-click": "mode"
   },
 
   "battery": {
@@ -90,19 +92,5 @@
     "format-full": " {capacity}%",
     "format-icons": ["", "", "", "", ""],
     "tooltip-format": " {power}W",
-  },
-  "custom/spotify": {
-    "exec": "mediaplayer.py --player spotify",
-    "format": " {}",
-    "rotate": 0,
-    "return-type": "json",
-    "on-click": "playerctl play-pause --player spotify",
-    "on-click-right": "playerctl next --player spotify",
-    "on-click-middle": "playerctl previous --player spotify",
-    "on-scroll-up": "volumecontrol.sh -p spotify i",
-    "on-scroll-down": "volumecontrol.sh -p spotify d",
-    "max-length": 25,
-    "escape": true,
-    "tooltip": true,
   },
 }
