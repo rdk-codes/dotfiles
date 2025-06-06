@@ -11,9 +11,18 @@
     "custom/brightness",
     "pulseaudio",
     "battery",
+    "custom/bluetooth",
     "network",
     "clock",
   ],
+
+  "custom/bluetooth": {
+    "exec": "~/.config/waybar/scripts/bluetooth_status.sh",
+    "interval": 10,
+    "format": "{}",
+    "return-type": "json",
+    "on-click": "bluetoothctl connect 3C:B0:ED:37:C6:58"
+  },
 
   "hyprland/workspaces": {
     "disable-scroll": true,
