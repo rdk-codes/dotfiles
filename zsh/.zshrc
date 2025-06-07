@@ -99,6 +99,7 @@ alias chrome='env OZONE_PLATFORM=wayland google-chrome-stable --ozone-platform=w
 alias code='env OZONE_PLATFORM=wayland code --ozone-platform=wayland &'
 alias obsidian='env OZONE_PLATFORM=wayland obsidian --ozone-platform=wayland &'
 alias lg='lazygit'
+
 # fallbacks
 if command -v zoxide >/dev/null 2>&1; then
   eval "$(zoxide init --cmd cd zsh)"

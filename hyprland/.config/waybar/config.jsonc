@@ -8,7 +8,6 @@
   "modules-center": ["hyprland/submap", "hyprland/window"],
   // "modules-center": ["custom/media"],
   "modules-right": [
-    "custom/brightness",
     "pulseaudio",
     "battery",
     "custom/bluetooth",
@@ -21,7 +20,7 @@
     "interval": 10,
     "format": "{}",
     "return-type": "json",
-    "on-click": "bluetoothctl connect 3C:B0:ED:37:C6:58"
+    "on-click": "blueman-manager"
   },
 
   "hyprland/workspaces": {
@@ -69,16 +68,6 @@
     "on-click": "pamixer -t",
     "on-scroll-up": "pamixer -i 5",
     "on-scroll-down": "pamixer -d 5",
-  },
-
-  "custom/brightness": {
-    "name": "custom/brightness",
-    "exec": "brightnessctl | awk -F '[()]' '/Current/ {print $2}'",
-    "interval": 1,
-    "format": "󰃞 {}",
-    "tooltip": false,
-    "on-scroll-up": "brightnessctl set +5%",
-    "on-scroll-down": "brightnessctl set 5%-",
   },
 
   "clock": {
