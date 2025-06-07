@@ -99,6 +99,7 @@ alias chrome='env OZONE_PLATFORM=wayland google-chrome-stable --ozone-platform=w
 alias code='env OZONE_PLATFORM=wayland code --ozone-platform=wayland &'
 alias obsidian='env OZONE_PLATFORM=wayland obsidian --ozone-platform=wayland &'
 alias lg='lazygit'
+alias so='source ~/.zshrc'
 
 # fallbacks
 if command -v zoxide >/dev/null 2>&1; then
@@ -112,3 +113,5 @@ if ! command -v eza >/dev/null 2>&1; then
   alias l='ls -1'
 fi
 
+# To customize prompt, run `p10k configure` or edit ~/dotfiles/zsh/.p10k.zsh.
+[[ ! -f ~/dotfiles/zsh/.p10k.zsh ]] || source ~/dotfiles/zsh/.p10k.zsh

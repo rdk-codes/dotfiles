@@ -4,10 +4,10 @@ local wezterm = require("wezterm")
 local config = wezterm.config_builder and wezterm.config_builder() or {}
 
 -- Appearance
-config.font = wezterm.font("JetBrainsMono Nerd Font")
+config.font = wezterm.font("JetBrainsMono Nerd Font Mono")
 config.font_size = 16
 config.enable_tab_bar = false
-config.window_background_opacity = 0.96
+config.window_background_opacity = 0.95
 config.default_cursor_style = "BlinkingBar"
 config.cursor_blink_rate = 600
 config.window_close_confirmation = "NeverPrompt"
