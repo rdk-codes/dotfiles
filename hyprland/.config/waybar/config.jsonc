@@ -1,12 +1,7 @@
 {
-  //  "layer": "top",
   "position": "top",
-  //  "margin-top": 6,
-  //  "margin-left": 6,
-  //  "margin-right": 6,
   "modules-left": ["hyprland/workspaces"],
   "modules-center": ["hyprland/submap", "hyprland/window"],
-  // "modules-center": ["custom/media"],
   "modules-right": [
     "pulseaudio",
     "battery",
@@ -71,7 +66,7 @@
   },
 
   "clock": {
-    "format": " {:%I:%M:%S}",
+    "format": "  {:%I:%M:%S} ",
     "tooltip-format": "󰃭 {:%A, %d %B %Y}",
     "interval": 1,
     "on-click": "mode"
