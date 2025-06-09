@@ -1,0 +1,89 @@
+{
+  "position": "top",
+  "modules-left": ["hyprland/workspaces"],
+  "modules-center": ["hyprland/submap", "hyprland/window"],
+  "modules-right": [
+    "pulseaudio",
+    "battery",
+    "custom/bluetooth",
+    "network",
+    "clock",
+  ],
+
+  "custom/bluetooth": {
+    "exec": "~/.config/waybar/scripts/bluetooth_status.sh",
+    "interval": 10,
+    "format": "{}",
+    "return-type": "json",
+    "on-click": "blueman-manager"
+  },
+
+  "hyprland/workspaces": {
+    "disable-scroll": true,
+    "all-outputs": true,
+    "warp-on-scroll": false,
+    "format": "{name}",
+  },
+
+  "hyprland/submap": {
+    "always-on": true,
+    "default-submap": "",
+    "format": "[{}]",
+    "format-resize": "{}",
+    "tooltip": false,
+  },
+
+  "hyprland/window": {
+    "format": "{title}",
+    "max-length": 48,
+    "tooltip": false,
+    "icon": true,
+    "icon-size": 18,
+  },
+
+  "network": {
+    "format-wifi": " ",
+    "format-alt": "  {essid}",
+    "format-ethernet": "{ipaddr}/{cidr} ",
+    "tooltip-format": "{ifname} via {gwaddr} ",
+    "format-linked": "{ifname} (No IP) ",
+    "format-disconnected": "Disconnected ⚠",
+    "on-click": "mode"
+  },
+
+  "pulseaudio": {
+    "format": "{icon}  {volume}%",
+    "format-muted": " ",
+    "format-source": " {volume}%",
+    "format-source-muted": "",
+    "format-icons": {
+      "default": ["", "", ""],
+    },
+    "scroll-step": 5,
+    "on-click": "pamixer -t",
+    "on-scroll-up": "pamixer -i 5",
+    "on-scroll-down": "pamixer -d 5",
+  },
+
+  "clock": {
+    "format": "  {:%I:%M:%S} ",
+    "tooltip-format": "󰃭 {:%A, %d %B %Y}",
+    "interval": 1,
+    "on-click": "mode"
+  },
+
+  "battery": {
+    "interval": 10,
+    "states": {
+      "warning": 20,
+      "critical": 10,
+    },
+    "format": "{icon} {capacity}%",
+    "format-charging": " {capacity}%",
+    "format-plugged": " {capacity}%",
+    "format-charging-full": " {capacity}%",
+    "format-full": " {capacity}%",
+    "format-icons": ["", "", "", "", ""],
+    "tooltip-format": " {power}W",
+  },
+}

@@ -1,0 +1,157 @@
+* {
+    border: none;
+    margin: 0;
+    padding: 0;
+    font-family: "JetBrainsMono Nerd Font", monospace;
+    font-size: 14px;
+    min-height: 0px;
+    color: #e0def4; /* @text */
+    background: transparent;
+}
+
+window#waybar {
+    background: rgba(8, 8, 15, 0.9);
+    padding: 0px 10px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+}
+
+/* === Workspaces === */
+#workspaces {
+    padding: 0 2px;
+    margin: 4px 2px;
+}
+
+#workspaces button {
+    color: #ebbcba; /* @rose */
+    background: transparent;
+    padding: 4px 8px;
+    margin: 1px 2px;
+    border-radius: 3px;
+    border-top: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+#workspaces button.active {
+    color: #c4a7e7; /* @mauve */
+    font-weight: bold;
+    background: rgba(49, 116, 143, 0.1);
+    text-shadow: 0 0 6px #31748f; /* @pine */
+    border-top: 2px solid rgba(196, 167, 231, 0.5); /* @mauve subtle */
+}
+
+#workspaces button:hover {
+    color: #f6c177; /* @gold */
+    background: rgba(246, 193, 119, 0.1);
+}
+
+#workspaces button.urgent {
+    background-color: #eb4d4b;
+    border-top: 2px solid #eb4d4b;
+    animation: urgent-blink 1s infinite;
+}
+
+/* === Module Defaults === */
+#clock,
+#network,
+#battery,
+#pulseaudio,
+#custom-bluetooth,
+#backlight,
+#tray,
+#window,
+#submap {
+    padding: 0px 8px 0px 8px;
+    margin: 6px 4px;
+    border-radius: 6px;
+    transition:
+        background 0.3s ease,
+        color 0.3s ease;
+}
+
+/* === Module-specific coloring === */
+#clock {
+    color: #9ccfd8; /* @foam */
+}
+#network {
+    color: #9ccfd8; /* @foam */
+}
+#pulseaudio {
+    color: #c4a7e7; /* @iris */
+}
+#pulseaudio.muted {
+    color: #6e6a86; /* @muted */
+    font-style: italic;
+}
+#custom-bluetooth,
+#backlight {
+    color: #f6c177; /* @gold */
+}
+#battery {
+    color: #ebbcba; /* @rose */
+}
+#battery.charging {
+    color: #31748f; /* @pine */
+}
+#battery.plugged {
+    color: #9ccfd8; /* @foam */
+}
+#battery.full {
+    color: #c4a7e7; /* @iris */
+}
+#battery.warning {
+    color: #f6c177; /* @gold */
+}
+#battery.critical {
+    color: #eb6f92; /* @love */
+    animation: critical-blink 1s infinite;
+}
+#custom-cpu {
+    color: #c4a7e7; /* @iris */
+}
+#custom-memory {
+    color: #31748f; /* @pine */
+}
+#custom-temp {
+    color: #eb6f92; /* @love */
+}
+
+/* === Hover Interactions === */
+#clock:hover,
+#network:hover,
+#battery:hover,
+#pulseaudio:hover,
+#custom-brightness:hover,
+#backlight:hover {
+    font-weight: 800;
+    background: rgba(196, 167, 231, 0.08); /* iris */
+    color: #ebbcba; /* @rose */
+    text-shadow: 0 0 4px #ebbcba;
+}
+
+/* === Tooltip Styling === */
+tooltip {
+    background: #2a273f; /* @highlightLow */
+    color: #e0def4; /* @text */
+    border: 1px solid #6e6a86; /* @muted */
+    border-radius: 8px;
+    padding: 8px 12px;
+}
+
+/* === Animations === */
+@keyframes critical-blink {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.4;
+    }
+}
+
+@keyframes urgent-blink {
+    0% {
+        text-shadow: 0 0 2px #eb6f92;
+    }
+    100% {
+        text-shadow: 0 0 8px #eb6f92;
+    }
+}
