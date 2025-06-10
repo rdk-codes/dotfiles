@@ -84,8 +84,7 @@ bindkey '^j' history-search-forward
 alias rls='/bin/ls'
 alias l='eza --color=always --icons=always -1'
 alias ls='eza --color=always --icons=always'
-alias ll='eza --color=always --icons=always -la'
-alias la='eza --color=always --icons=always -a'
+alias ll='eza --color=always --icons=always -l'
 alias nvcc='rm -rf ~/.local/share/nvim ~/.local/state/nvim ~/.cache/nvim'
 alias cw="source ~/.config/hypr/scripts/swww/change.sh"
 alias lg='lazygit'
