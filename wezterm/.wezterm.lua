@@ -44,10 +44,10 @@ config.colors = {
 
 config.window_decorations = "NONE"
 config.window_padding = {
-	left = 32,
-	right = 32,
-	top = 32,
-	bottom = 32,
+	left = 10,
+	right = 10,
+	top = 10,
+	bottom = 10,
 }
 
 return config

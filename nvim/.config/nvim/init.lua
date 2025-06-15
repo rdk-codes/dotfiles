@@ -1,5 +1,4 @@
 vim.g.mapleader = " "
-vim.g.maplocalleaer = " "
-vim.g.have_nerd_font = true
+vim.g.maplocalleader = " "
 
 require("config")
